@@ -10,6 +10,7 @@ describe 'navigate' do
     before do
       visit posts_path
     end
+    
     it 'can be reached successfully' do      
       expect(page.status_code).to eq(200)
     end
@@ -25,6 +26,15 @@ describe 'navigate' do
       expect(page).to have_content(/Rationale|content/)
     end
   end
+
+  describe 'new' do
+    it 'has a link from the homepage' do
+      visit root_path
+
+      click_link("new_post_from_nav")
+      expect(page.status_code).to eq(200)
+  end
+end
 
   describe 'creation' do
     before do
@@ -56,6 +66,7 @@ describe 'navigate' do
     before do
       @post = FactoryGirl.create(:post)
     end
+    
     it 'can be reached by clicking edit on index page' do    
       visit posts_path
 
