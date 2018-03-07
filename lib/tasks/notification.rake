@@ -10,8 +10,5 @@ namespace :notification do
     # end
     # number:
     # number:
-    # No space or dashes
-    # Exactly 10 characters
-    # All characters have to be a number
   end
 end
