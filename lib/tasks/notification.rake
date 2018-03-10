@@ -8,7 +8,5 @@ namespace :notification do
     # User.all.each do |user|
     #   SmsTool.send_sms()
     # end
-    # number:
-    # number:
   end
 end
