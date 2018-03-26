@@ -1,6 +1,4 @@
 class ManagerMailer < ApplicationMailer::Base
-  def email manager
-    @manager = manager
-    mail(to: @manager.email, subject: 'Daily Overtime Request Email')
-  end
+  default from: ‘from@example.com’
+  layout ‘mailer’
 end
