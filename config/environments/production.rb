@@ -16,10 +16,10 @@ Rails.application.configure do
   config.action_mailer.default_url_options = { :host => 'daviesinc-overtime.herokuapp.com' }
 end
 
-  if ENV["RAILS_LOG_TO_STDOUT"].present?
-    logger           = ActiveSupport::Logger.new(STDOUT)
-    logger.formatter = config.log_formatter
-    config.logger    = ActiveSupport::TaggedLogging.new(logger)
-  end
-  config.active_record.dump_schema_after_migration = false
+  # if ENV["RAILS_LOG_TO_STDOUT"].present?
+  #   logger           = ActiveSupport::Logger.new(STDOUT)
+  #   logger.formatter = config.log_formatter
+  #   config.logger    = ActiveSupport::TaggedLogging.new(logger)
+  # end
+  # config.active_record.dump_schema_after_migration = false
 
