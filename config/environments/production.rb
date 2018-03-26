@@ -14,12 +14,12 @@ Rails.application.configure do
   config.active_record.dump_schema_after_migration = false
   config.serve_static_assets = true
   config.action_mailer.default_url_options = { :host => 'daviesinc-overtime.herokuapp.com' }
+
+  if ENV["RAILS_LOG_TO_STDOUT"].present?
+    logger           = ActiveSupport::Logger.new(STDOUT)
+    logger.formatter = config.log_formatter
+    config.logger    = ActiveSupport::TaggedLogging.new(logger)
+  end
+  config.active_record.dump_schema_after_migration = false
+
 end
-
-  # if ENV["RAILS_LOG_TO_STDOUT"].present?
-  #   logger           = ActiveSupport::Logger.new(STDOUT)
-  #   logger.formatter = config.log_formatter
-  #   config.logger    = ActiveSupport::TaggedLogging.new(logger)
-  # end
-  # config.active_record.dump_schema_after_migration = false
-
