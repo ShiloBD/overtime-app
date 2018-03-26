@@ -1,3 +1,5 @@
+require "administrate/base_dashboard"
+
 class AdminUserDashboard < Administrate::BaseDashboard
   ATTRIBUTE_TYPES = {
     posts: Field::HasMany.with_options(searchable: false),
@@ -13,8 +15,8 @@ class AdminUserDashboard < Administrate::BaseDashboard
     last_name: Field::String.with_options(searchable: false),
     created_at: Field::DateTime.with_options(searchable: false),
     updated_at: Field::DateTime.with_options(searchable: false),
+    type: Field::String.with_options(searchable: false),
     phone: Field::String.with_options(searchable: false),
-    type: Field::String,
   }.freeze
 
   COLLECTION_ATTRIBUTES = [
