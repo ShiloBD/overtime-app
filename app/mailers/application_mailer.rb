@@ -1,4 +1,4 @@
-class ManagerMailer < ApplicationMailer::Base
-  default from: "from@example.com"
-  layout "mailer"
+class ApplicationMailer < ActionMailer::Base
+  default from: "mailer@devcamp.com"
+  layout 'mailer'
 end
